@@ -76,7 +76,6 @@
                             <label for="exampleInputText" class="form-label">Nama Pasien</label>
                             <input type="text" class="form-control" id="nama" name="nama" value="{{ $data->nama}}"
                                 aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">Ex: (Budi Budiman)</div>
                         </div>
                         <!-- end form text field -->
                         <!-- form text field -->
@@ -105,7 +104,6 @@
                             <label for="exampleInputText" class="form-label">Penyakit</label>
                             <input type="text" class="form-control" id="penyakit" name="penyakit" value="{{ $data->penyakit}}"
                                 aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">Ex: (Asma)</div>
                         </div>
                         <!-- end form text field -->
                        
