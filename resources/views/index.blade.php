@@ -99,7 +99,7 @@
                                     
                                     <div class="mb-3 mt-3">
                                         <form action="{{ url('/adminIndex') }}" method="GET">
-                                            <input type="text" name="search" placeholder="        Cari Nama Pasien"  value="{{ request()->get('search') }}">
+                                            <input type="search" name="search" placeholder="        Cari Nama Pasien"  value="{{ request()->get('search') }}">
                                             <a href="/adminIndex" class="btn btn-primary">Cari</a>
                                         </form>
                                     </div>
