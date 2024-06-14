@@ -44,11 +44,17 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Wisata -->
+            <!-- Nav Item - Pasien -->
             <li class="nav-item">
                 <a class="nav-link" href="adminIndex">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Data Pasien</span></a>
+            </li>
+            <!-- Nav Item - History -->
+            <li class="nav-item">
+                <a class="nav-link" href="historyIndex">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>History Pasien</span></a>
             </li>
         </ul>
         <!-- End of Sidebar -->
@@ -76,7 +82,6 @@
                                             <th>Nama Pasien</th>
                                             <th>Gender</th>
                                             <th>Umur</th>
-                                            <th>Riwayat Penyakit</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -87,7 +92,6 @@
                                             <td>{{ $dt->nama }}
                                             <td>{{ $dt->gender }}
                                             <td>{{ $dt->umur }}
-                                            <td>{{ $dt->penyakit }}
                                             <td>
                                                 <a href="/adminEdit/{{ $dt->id }}" class="btn btn-warning">Edit</a>
                                                 <a href="/delete/{{ $dt->id }}" class="btn btn-danger m-1">Hapus</a>
