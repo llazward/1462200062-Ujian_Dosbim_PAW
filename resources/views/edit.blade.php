@@ -107,7 +107,7 @@
                         </div>
                         <!-- end form text field -->
                        
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Selesai</button>
                     </form>
                     <!-- end body -->
 
