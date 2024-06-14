@@ -15,7 +15,7 @@ class HistoryPenyakitController extends Controller
         if($request->has('search')) {
             $search = $request->search;
             $query->where('nama', 'LIKE', "%$search%")
-                  ->orWhere('umur', 'LIKE', "%$search%")
+                  ->orWhere('penyakit', 'LIKE', "%$search%")
                   ->orWhere('tanggal', 'LIKE', "%$search%");
         }
     
