@@ -44,11 +44,17 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Wisata -->
+            <!-- Nav Item - Pasien -->
             <li class="nav-item">
                 <a class="nav-link" href="adminIndex">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Data Pasien</span></a>
+            </li>
+            <!-- Nav Item - History -->
+            <li class="nav-item">
+                <a class="nav-link" href="historyIndex">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>History Pasien</span></a>
             </li>
         </ul>
         <!-- End of Sidebar -->
@@ -66,7 +72,8 @@
                     <h1 class="h3 mb-2 text-gray-800">Edit Data Pasien</h1><br>
 
                     <!-- body -->
-                    <form action="/edit">
+                    <form action="{{ url('/edit') }}" method="POST">
+                        @csrf
                         <!-- hidden id -->
                         <input type="hidden" class="form-control" id="id" name="id" value="{{ $data->id }}"
                                 aria-describedby="emailHelp">
