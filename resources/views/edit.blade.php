@@ -100,7 +100,7 @@
                             <label for="exampleInputText" class="form-label">Umur</label>
                             <select class="form-select" id="umur" name="umur" value="{{ $data->umur}}"> 
                                 <option value="" disabled {{ $data->umur == '' ? 'selected' : '' }}>Pilih Umur</option>
-                                <option value="Anak-anak" {{ $data->umur == 'Anak-anak' ? 'selected' : '' }}>Anak-anak</option>
+                                <option value="Anak-anak" {{ $data->umur == 'Anak-Anak' ? 'selected' : '' }}>Anak-Anak</option>
                                 <option value="Dewasa" {{ $data->umur == 'Dewasa' ? 'selected' : '' }}>Dewasa</option>
                                 <option value="Lansia" {{ $data->umur == 'Lansia' ? 'selected' : '' }}>Lansia</option>
                             </select>
