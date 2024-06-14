@@ -103,7 +103,7 @@
                                     
                                     <div class="mb-3 mt-3">
                                         <form action="{{ url('/adminIndex') }}" method="GET">
-                                            <input type="search" name="search" placeholder="Cari Nama/Gender/Umur" value="{{ request()->get('search') }}">
+                                            <input type="search" name="search" placeholder="     Nama/Gender/Umur" value="{{ request()->get('search') }}">
                                             <button type="submit" class="btn btn-primary">Cari</button>
                                         </form>
                                     </div>
