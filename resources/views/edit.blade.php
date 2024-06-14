@@ -106,13 +106,6 @@
                             </select>
                         </div>
                         <!-- end form text field -->
-                        <!-- form text field -->
-                        <div class="mb-3">
-                            <label for="exampleInputText" class="form-label">Penyakit</label>
-                            <input type="text" class="form-control" id="penyakit" name="penyakit" value="{{ $data->penyakit}}"
-                                aria-describedby="emailHelp">
-                        </div>
-                        <!-- end form text field -->
                        
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
