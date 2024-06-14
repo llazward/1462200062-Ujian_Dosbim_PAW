@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('nama');
             $table->string('gender');
             $table->string('umur');
-            $table->string('penyakit');
             $table->timestamps();
         });
     }
