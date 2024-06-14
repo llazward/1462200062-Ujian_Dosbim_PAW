@@ -111,7 +111,7 @@
                                     
                                     <div class="mb-3 mt-3">
                                         <form action="{{ url('/historyIndex') }}" method="GET">
-                                            <input type="search" name="search" placeholder="        Cari Nama Pasien"  value="{{ request()->get('search') }}">
+                                            <input type="search" name="search" placeholder="    Nama/Umur/Tanggal"  value="{{ request()->get('search') }}">
                                             <a href="/historyIndex" class="btn btn-primary">Cari</a>
                                         </form>
                                     </div>
