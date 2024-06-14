@@ -34,7 +34,6 @@ class Lazward1462200062Controller extends Controller
         $newData->nama = $request->nama;
         $newData->gender = $request->gender;
         $newData->umur = $request->umur;
-        $newData->penyakit = $request->penyakit;
         $newData->save();
         $this->resetIds();
         return redirect('/adminIndex');
@@ -46,7 +45,6 @@ class Lazward1462200062Controller extends Controller
             'nama'=>$request->nama,
             'gender'=>$request->gender,
             'umur'=>$request->umur,
-            'penyakit'=>$request->penyakit,
         ]);
         return redirect('/adminIndex');
     }
@@ -61,7 +59,6 @@ class Lazward1462200062Controller extends Controller
         return redirect('/adminIndex');
     }
 
-    // reset ID
     private function resetIds() {
         $data = lazward1462200062::all();
         $count = 1;
