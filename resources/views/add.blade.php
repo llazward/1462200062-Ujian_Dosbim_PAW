@@ -44,11 +44,17 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Wisata -->
+            <!-- Nav Item - Pasien -->
             <li class="nav-item">
                 <a class="nav-link" href="adminIndex">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Data Pasien</span></a>
+            </li>
+            <!-- Nav Item - History -->
+            <li class="nav-item">
+                <a class="nav-link" href="historyIndex">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>History Pasien</span></a>
             </li>
         </ul>
         <!-- End of Sidebar -->
@@ -66,7 +72,8 @@
                     <h1 class="h3 mb-2 text-gray-800">Tambah Data Pasien</h1><br>
 
                     <!-- body -->
-                    <form action="/add">
+                    <form action="{{ url('/add') }}" method="POST">
+                        @csrf
                         <!-- hidden id -->
                         <input type="hidden" class="form-control" id="id" name="id" 
                                 aria-describedby="emailHelp">
@@ -93,17 +100,10 @@
                             <label for="exampleInputText" class="form-label">Umur</label>
                             <select class="form-select" id="umur" name="umur">
                                 <option selected disabled="">Pilih Umur</option>
-                                <option value="Anak-anak">Anak-anak</option>
+                                <option value="Anak-anak">Anak-Anak</option>
                                 <option value="Dewasa">Dewasa</option>
                                 <option value="Lansia">Lansia</option>
                             </select>
-                        </div>
-                        <!-- end form text field -->
-                        <!-- form text field -->
-                        <div class="mb-3">
-                            <label for="exampleInputText" class="form-label">Penyakit</label>
-                            <input type="text" class="form-control" id="penyakit" name="penyakit"
-                                aria-describedby="emailHelp">
                         </div>
                         <!-- end form text field -->
                         
