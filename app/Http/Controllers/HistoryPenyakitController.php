@@ -9,14 +9,18 @@ use Illuminate\Support\Facades\DB;
 
 class HistoryPenyakitController extends Controller
 {
-    public function historyIndex(Request $request)
-    {
-        if ($request->has('search')) {
-            $allData = HistoryPenyakit::where('nama', 'LIKE', '%' . $request->search . '%')->paginate(5);
-        } else {
-            $allData = HistoryPenyakit::paginate(5);
+    public function historyIndex(Request $request) {
+        $query = HistoryPenyakit::query();
+    
+        if($request->has('search')) {
+            $search = $request->search;
+            $query->where('nama', 'LIKE', "%$search%")
+                  ->orWhere('umur', 'LIKE', "%$search%")
+                  ->orWhere('tanggal', 'LIKE', "%$search%");
         }
-
+    
+        $allData = $query->paginate(5);
+    
         return view('history', ['data2' => $allData]);
     }
 
