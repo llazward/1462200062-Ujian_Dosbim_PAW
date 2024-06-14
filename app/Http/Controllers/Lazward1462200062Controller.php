@@ -9,14 +9,20 @@ use Illuminate\Support\Facades\DB;
 class Lazward1462200062Controller extends Controller
 {
     public function adminIndex(Request $request) {
+        $query = lazward1462200062::query();
+    
         if($request->has('search')) {
-            $allData = lazward1462200062::where('nama', 'LIKE', '%' .$request->search. '%')->paginate(5);
-        } else {
-            $allData = lazward1462200062::paginate(5);
+            $search = $request->search;
+            $query->where('nama', 'LIKE', "%$search%")
+                  ->orWhere('gender', 'LIKE', "%$search%")
+                  ->orWhere('umur', 'LIKE', "%$search%");
         }
-        
-        return view('index', ['data'=>$allData]);
+    
+        $allData = $query->paginate(5);
+    
+        return view('index', ['data' => $allData]);
     }
+    
 
     public function adminAdd() {
         $allData = lazward1462200062::all();
