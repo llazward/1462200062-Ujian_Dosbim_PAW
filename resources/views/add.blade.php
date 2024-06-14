@@ -100,7 +100,7 @@
                             <label for="exampleInputText" class="form-label">Umur</label>
                             <select class="form-select" id="umur" name="umur">
                                 <option selected disabled="">Pilih Umur</option>
-                                <option value="Anak-anak">Anak-Anak</option>
+                                <option value="Anak-Anak">Anak-Anak</option>
                                 <option value="Dewasa">Dewasa</option>
                                 <option value="Lansia">Lansia</option>
                             </select>
